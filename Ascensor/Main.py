@@ -186,6 +186,6 @@ def run():
     df1.to_excel(writer,'Objetos de casa', index=False)
     writer.close()
 
-
+    print("El programa finalizó exitosamente!!")
 if __name__ == "__main__":
     run()
