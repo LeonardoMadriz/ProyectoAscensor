@@ -4,7 +4,7 @@ import sys
 def calculus(z,p,vn,na,ne,grupo,t1,t2): 
 # Variables de entradas a tantear
     try:
-        if p > 33:
+        if p > 40:
             raise Exception("Se sobrepasa los límites permitidos por el modelo del ascensor")
     except Exception as ex:
         print(ex)
@@ -61,7 +61,3 @@ def calculus(z,p,vn,na,ne,grupo,t1,t2):
     c = (300*pv*(z*100))/(ttv*B)
     c = round(c,2)
     return (c,i)
-
-
-def saludar():
-    print("Hola")

@@ -1,6 +1,5 @@
-def box_power(mc,mcp,vn,radio, angular_velocity ):
-    strain = (4.4)*mc + (5.4)*mcp
-    torque = strain*radio
+def box_power(nom,vn,radio, angular_velocity ):
+    torque = (9.8)*0.5*nom*radio
     pulley_power = torque*angular_velocity
     box_p = pulley_power/0.8
     box_p = round(box_p,2)

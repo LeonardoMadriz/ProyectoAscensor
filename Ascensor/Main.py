@@ -42,7 +42,7 @@ def run():
     nom_a = float(df2.iloc[0,7])        #carga nominal de nuestro ascensor
     mc_a = nom_a/2                      #Peso de la cabina
 
-    radio_a = 0.2                       #Radio de la polea del motor(m)
+    radio_a = 0.14                      #Radio de la polea del motor(m)
     
     c_a, i_a = trafico_vertical.calculus(z_a,p_a,vn_a,na_a,ne_a,grupo1,t1,t2)        #Cálculo del tráfico vertical
     dimin_a = dimensiones.interpolacion(sup1_a,sup2min_a,inf1_a,inf2min_a,nom_a)    #Cálculo de las dimensiones de la cabina Mínimas
@@ -50,8 +50,8 @@ def run():
     cp_a = contrapeso(nom_a)                                                        #Cálculo del contrapeso
     w_a = angular_velocity(vn_a,radio_a)                                            #Cálculo de la velocidad angular
     gears_a = gears(w_a)                                                            #Calculo del número de engranajes para la caja
-    box_power_a = potencias.box_power(mc_a,cp_a,vn_a,radio_a,w_a)/1000              #Potencia de la caja
-    engine_power_a = potencias.engine_power(box_power_a)/1000                       #Potencia del motor
+    box_power_a = potencias.box_power(nom_a,vn_a,radio_a,w_a)/1000              #Potencia de la caja
+    engine_power_a = potencias.engine_power(box_power_a)                            #Potencia del motor
 
 
 
@@ -79,7 +79,7 @@ def run():
     mc_b = nom_b/2                      #Peso de la cabina
 
   
-    radio_b = 0.14                      #Radio de la polea (m)
+    radio_b = 0.12                      #Radio de la polea (m)
     
     c_b, i_b =trafico_vertical.calculus(z_b,p_b,vn_b,na_b,ne_b,grupo2,t1,t2)         #Cálculo vertical
     dimin_b = dimensiones.interpolacion(sup1_b,sup2min_b,inf1_b,inf2min_b,nom_b)    #Cálculo de las dimensiones de la cabina Mínimas
@@ -87,8 +87,8 @@ def run():
     cp_b = contrapeso(nom_b)                                                        #Cálculo del contrapeso
     w_b = angular_velocity(vn_b,radio_b)                                            #Cálculo de la velocidad angular
     gears_b = gears(w_b)                                                            #Calculo del número de engranajes para la caja
-    box_power_b = potencias.box_power(mc_b,cp_b,vn_b,radio_b,w_b)/1000              #Potencia de la caja
-    engine_power_b = potencias.engine_power(box_power_b)/1000                       #Potencia del motor
+    box_power_b = potencias.box_power(nom_b,vn_b,radio_b,w_b)/1000              #Potencia de la caja
+    engine_power_b = potencias.engine_power(box_power_b)                            #Potencia del motor
 
 
 
@@ -118,16 +118,16 @@ def run():
     mc_c = nom_c/2                      #Peso de la cabina
 
   
-    radio_c = 0.14                      #Radio de la polea(m)
+    radio_c = 0.12                      #Radio de la polea(m)
     
-    c_c, i_c =trafico_vertical.calculus(z_a,p_a,vn_a,na_a,ne_a,grupo3,t1,t2)         #Cálculo vertical
+    c_c, i_c =trafico_vertical.calculus(z_c,p_c,vn_c,na_c,ne_c,grupo3,t1,t2)         #Cálculo vertical
     dimin_c = dimensiones.interpolacion(sup1_c,sup2min_c,inf1_c,inf2min_c,nom_c)    #Cálculo de las dimensiones de la cabina Mínimas
     dimax_c = dimensiones.interpolacion(sup1_c,sup2max_c,inf1_c,inf2max_c,nom_c)    #Cálculo de las dimensiones de la cabina Máximas
     cp_c = contrapeso(nom_c)                                                        #Cálculo del contrapeso
     w_c = angular_velocity(vn_c,radio_c)                                            #Cálculo de la velocidad angular
     gears_c = gears(w_c)                                                            #Calculo del número de engranajes para la caja
-    box_power_c = potencias.box_power(mc_c,cp_c,vn_c,radio_c,w_c)/1000              #Potencia de la caja
-    engine_power_c = potencias.engine_power(box_power_c)/1000                       #Potencia del motor
+    box_power_c = potencias.box_power(nom_c,vn_c,radio_c,w_c)/1000              #Potencia de la caja
+    engine_power_c = potencias.engine_power(box_power_c)                            #Potencia del motor
 
 
 
@@ -155,7 +155,7 @@ def run():
     mc_d = nom_d/2                      #Peso de la cabina
 
   
-    radio_d = 0.2                        #Radio de la polea(m)
+    radio_d = 0.14                        #Radio de la polea(m)
     
     c_d, i_d =trafico_vertical.calculus(z_d,p_d,vn_d,na_d,ne_d,grupo4,t1,t2)        #Cálculo vertical
     dimin_d = dimensiones.interpolacion(sup1_d,sup2min_d,inf1_d,inf2min_d,nom_d)    #Cálculo de las dimensiones de la cabina Mínimas
@@ -163,8 +163,8 @@ def run():
     cp_d = contrapeso(nom_d)                                                        #Cálculo del contrapeso
     w_d = angular_velocity(vn_d,radio_d)                                            #Cálculo de la velocidad angular
     gears_d = gears(w_d)                                                            #Calculo del número de engranajes para la caja
-    box_power_d = potencias.box_power(mc_d,cp_d,vn_d,radio_d,w_d)/1000              #Potencia de la caja
-    engine_power_d = potencias.engine_power(box_power_d)/1000                       #Potencia del motor
+    box_power_d = potencias.box_power(nom_d,vn_d,radio_d,w_d)/1000              #Potencia de la caja
+    engine_power_d = potencias.engine_power(box_power_d)                            #Potencia del motor
 
 
 
